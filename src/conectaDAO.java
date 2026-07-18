@@ -22,7 +22,8 @@ public class conectaDAO {
         
         try {
         
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/uc11?user=ricardo&vasco=");
+           String url = "jdbc:mysql://localhost/uc11?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+conn = DriverManager.getConnection(url, "ricardo", "vasco");
             
         } catch (SQLException erro){
             JOptionPane.showMessageDialog(null, "Erro ConectaDAO" + erro.getMessage());
